@@ -35,8 +35,7 @@ jobs:
         run: npm i puppeteer
 
       - name: Run R script
-              run: |
-                source("hello.R")
+              run: source("hello.R")
               shell: Rscript {0} 
 
       - name: Commit files
@@ -47,4 +46,3 @@ jobs:
           git commit -am "add data"
           git push 
 
-          
