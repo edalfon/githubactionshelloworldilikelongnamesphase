@@ -9,6 +9,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+      # Every ten minutes https://crontab.cronhub.io/
+      - cron: "*/10 * * * *"
 
 permissions:
   contents: write
