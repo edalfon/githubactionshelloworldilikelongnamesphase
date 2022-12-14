@@ -11,9 +11,7 @@ on:
       - main
 
 permissions:
-  contents: read
-  # Needed for the 'trilom/file-changes-action' action
-  pull-requests: read
+  contents: write
 
 jobs:
   check-links:
@@ -34,6 +32,10 @@ jobs:
       - name: Install Puppeteer
         run: npm i puppeteer
 
+      # How can I customize an action to run R code?
+      # The safest way is to add a step to your action, specifying 
+      # Rscript {0} as the shell for that step. 
+      # https://github.com/r-lib/actions
       - name: Run R script
         run: source("hello.R")
         shell: Rscript {0} 
