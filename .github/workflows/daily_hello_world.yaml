@@ -35,8 +35,8 @@ jobs:
         run: npm i puppeteer
 
       - name: Run R script
-              run: source("hello.R")
-              shell: Rscript {0} 
+        run: source("hello.R")
+        shell: Rscript {0} 
 
       - name: Commit files
         run: |
